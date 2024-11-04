@@ -16,6 +16,10 @@ export class BooksService {
     return this.http.get<Book>(Url + 'books/' + id);
   }
 
+  public getAuthor(id: string): Observable<Author> {
+    return this.http.get<Author>(Url + 'books/' + id)
+  }
+
   public addBook(book: Book): Observable<Book> {
     return this.http.post<Book>(Url + 'books', book);
   }
